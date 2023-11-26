@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicholas Richmond Mole - Resume</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
     <header>
         <h1>Nicholas Richmond Mole</h1>
         <p>2715 Cortland Place NW | Washington D.C. 20008 | <a href="mailto:nickmole1@outlook.com">nickmole1@outlook.com</a> | (202) 288-1265</p>
     </header>
+
+    <section id="map">
+        <div id="mapid" style="height: 500px;"></div>
+    </section>
 
     <section id="summary">
         <h2>Professional Summary</h2>
@@ -56,5 +62,15 @@
     <footer>
         <p>&copy; 2023 Nicholas Richmond Mole. All rights reserved.</p>
     </footer>
+
+    <script>
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(mymap);
+</script>
+
 </body>
 </html>
