@@ -20,10 +20,35 @@ body {
     margin: 10px;
     overflow: hidden;
     width: 350px; /* You can adjust the width */
+    text-align: center;
 }
 
 .card-content {
     padding: 20px;
+}
+
+.card-content ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.card-content li {
+    margin-bottom: 10px; /* Space out the items */
+}
+
+.card-content img {
+    width: 80px; /* Fixed width, adjust as needed */
+    height: 80px; /* Fixed height for a circle */
+    border-radius: 50%; /* Make the image round */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-content a {
+    display: block; /* Make the link take up the full width */
+    margin-top: 5px; /* Space above the link */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color, adjust as needed */
+    font-weight: bold; /* Make the text bold */
 }
 
 #mapid {
