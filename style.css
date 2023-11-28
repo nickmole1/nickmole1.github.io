@@ -41,6 +41,9 @@ body {
     height: 80px; /* Fixed height for a circle */
     border-radius: 50%; /* Make the image round */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block; /* Aligns image properly within the list */
+    margin: 0 auto 10px; /* Centers the image and adds margin below */
 }
 
 .card-content a {
