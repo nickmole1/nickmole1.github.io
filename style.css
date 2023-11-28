@@ -6,6 +6,30 @@ body {
     color: #333;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    width: 300px; /* You can adjust the width */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+#map {
+    height: 200px; /* Adjust height as needed */
+}
+
 header {
     background-color: #444;
     color: white;
