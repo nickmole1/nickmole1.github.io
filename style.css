@@ -57,6 +57,39 @@ body {
     margin: 0 auto 10px; /* Centers the image and adds margin below */
 }
 
+.card-content.gpts ul li {
+    list-style: none; /* Removes the bullet points */
+    margin-bottom: 15px; /* Space between items */
+}
+
+.card-content.gpts .gpt-link {
+    display: flex; /* Aligns children inline */
+    align-items: center; /* Aligns children vertically */
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color from parent */
+}
+
+.card-content.gpts .gpt-link img {
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    margin-right: 10px; /* Space between the image and text */
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-content.gpts .gpt-link span {
+    /* Additional styles if needed, e.g., font-size, font-weight */
+}
+
+/* Update the .card-content a selector to not apply block display to links inside .gpts */
+.card-content:not(.gpts) a {
+    display: block; /* Make the link take up the full width */
+    margin-top: 5px; /* Space above the link */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color, adjust as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
 #mapid {
     height: 200px; /* Adjust height as needed */
 }
