@@ -47,14 +47,32 @@ body {
     font-weight: bold; /* Make the text bold */
 }
 
-.card-content.gpts ul li img {
-    width: 80px; /* Fixed width, adjust as needed */
-    height: 80px; /* Fixed height for a circle */
-    border-radius: 50%; /* Make the image round */
+.card-content.gpts .gpt-link {
+    display: flex; /* Aligns children inline */
+    align-items: center; /* Aligns children vertically */
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color from parent */
+    margin-bottom: 10px; /* Space between link items */
+}
+
+.card-content.gpts .gpt-link img {
+    width: 50px; /* Fixed width, adjust as needed */
+    height: 50px; /* Fixed height for a circle */
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 10px; /* Space between the image and text */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    display: block; /* Aligns image properly within the list */
-    margin: 0 auto 10px; /* Centers the image and adds margin below */
+}
+
+.card-content.gpts .gpt-link span {
+    /* Styles for the text */
+}
+
+.card-content:not(.gpts) a {
+    display: block; /* Make the link take up the full width */
+    margin-top: 5px; /* Space above the link */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color, adjust as needed */
+    font-weight: bold; /* Make the text bold */
 }
 
 .card-content.gpts ul li {
@@ -81,7 +99,6 @@ body {
     /* Additional styles if needed, e.g., font-size, font-weight */
 }
 
-/* Update the .card-content a selector to not apply block display to links inside .gpts */
 .card-content:not(.gpts) a {
     display: block; /* Make the link take up the full width */
     margin-top: 5px; /* Space above the link */
