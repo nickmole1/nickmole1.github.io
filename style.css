@@ -52,6 +52,7 @@ body {
     align-items: center; /* Aligns children vertically */
     text-decoration: none; /* Removes underline from links */
     color: inherit; /* Inherits text color from parent */
+    margin-bottom: 10px; /* Space between link items */
 }
 
 .card-content.gpts .gpt-link img {
