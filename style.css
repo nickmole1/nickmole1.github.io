@@ -123,14 +123,15 @@ body {
     margin: 10px;
     overflow: hidden;
     width: 350px; /* Same as .card */
-    height: 100%; /* Ensures it takes the full height */
 }
 
 .card, .card-link {
     height: auto;
+}
 
 .card, .card-link .card {
     height: 100%;
+}
 
 #mapid {
     height: 200px; /* Adjust height as needed */
