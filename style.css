@@ -113,34 +113,24 @@ body {
     font-weight: bold; /* Make the text bold */
 }
 
-    .card-link {
-    display: block; /* Changed from inline to block */
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Inherits the text color */
-    background-color: #fff; /* Same as .card */
-    border-radius: 8px; /* Same as .card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Same as .card */
-    margin: 10px;
-    overflow: hidden;
-    width: 350px; /* Same as .card */
-}
-
-.card, .card-link {
-    display: flex; /* This makes it a flex container */
-    flex-direction: column; /* This stacks the child elements (card-content) vertically */
-    justify-content: space-between; /* This will ensure that the header and footer of the card are pushed to the top and bottom */
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
     overflow: hidden;
-    width: 350px; /* You can adjust the width */
-    text-align: center;
-    /* Don't set a height here, so it automatically stretches */
+    width: 350px;
+    height: 100%;
+}
+
+.card, .card-link {
+    height: auto;
 }
 
 .card, .card-link .card {
-    height: 100%;
 }
 
 #mapid {
