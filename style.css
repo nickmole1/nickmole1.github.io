@@ -116,7 +116,16 @@ body {
 .card-link {
     text-decoration: none; /* Removes the underline from links */
     color: inherit; /* Inherits the text color */
+    background-color: #fff; /* Same as .card */
+    border-radius: 8px; /* Same as .card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Same as .card */
+    margin: 10px;
+    overflow: hidden;
+    width: 350px; /* Same as .card */
 }
+
+.card, .card-link {
+    height: auto;
 
 #mapid {
     height: 200px; /* Adjust height as needed */
