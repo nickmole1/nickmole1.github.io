@@ -11,6 +11,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
+    align-items: stretch; /* This line will ensure that the child elements stretch to fill the container */
 }
 
 .card {
@@ -25,6 +26,10 @@ body {
 
 .card-content {
     padding: 20px;
+    flex: 1; /* This will make the card-content expand to fill the available space */
+    display: flex; /* This makes it a flex container */
+    flex-direction: column; /* This stacks the child elements vertically */
+    justify-content: space-between; /* This will push the content to the top and bottom */
 }
 
 .card-content ul {
@@ -126,7 +131,17 @@ body {
 }
 
 .card, .card-link {
-    height: auto;
+    display: flex; /* This makes it a flex container */
+    flex-direction: column; /* This stacks the child elements (card-content) vertically */
+    justify-content: space-between; /* This will ensure that the header and footer of the card are pushed to the top and bottom */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    width: 350px; /* You can adjust the width */
+    text-align: center;
+    /* Don't set a height here, so it automatically stretches */
 }
 
 .card, .card-link .card {
