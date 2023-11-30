@@ -113,6 +113,11 @@ body {
     font-weight: bold; /* Make the text bold */
 }
 
+.card-link {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Inherits the text color */
+}
+
 #mapid {
     height: 200px; /* Adjust height as needed */
 }
