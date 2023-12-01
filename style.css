@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This ensures padding doesn't add to the width of the boxes */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -122,10 +128,14 @@ body {
 }
 
 .card-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: inherit;
-    background-color: transparent; /* Remove any background color to avoid visual issues */
-    align-items: stretch; /* Stretch the link to fill the height of the card */
+    width: 100%;
+    height: 100%;
+    padding: 0;
 }
 
 .card, .card-link {
@@ -169,4 +179,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
