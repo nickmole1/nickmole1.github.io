@@ -11,6 +11,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
+    align-items: stretch;
 }
 
 .card {
@@ -44,7 +45,14 @@ body {
     margin-top: 5px; /* Space above the link */
     text-decoration: none; /* Remove underline from links */
     color: #333; /* Link color, adjust as needed */
-    font-weight: bold; /* Make the text bold */
+    font-weight: bold;
+}
+
+.card-content, .card-link .card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
 }
 
 .card-content.gpts .gpt-link {
@@ -114,21 +122,22 @@ body {
 }
 
 .card-link {
-    display: block;
     text-decoration: none;
     color: inherit;
-    background-color: transparent;
-    overflow: hidden;
-    width: 350px;
-    height: 100%;
+    background-color: transparent; /* Remove any background color to avoid visual issues */
+    align-items: stretch; /* Stretch the link to fill the height of the card */
+}
+
+.card, .card-link {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
-}
-
-.card, .card-link {
-    height: auto;
+    overflow: hidden;
+    width: 350px;
+    text-align: center;
 }
 
 .card, .card-link .card {
