@@ -9,7 +9,7 @@ body {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -159,4 +159,8 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
