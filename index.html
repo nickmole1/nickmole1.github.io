@@ -100,16 +100,16 @@
   
     <script>
         function calculateTotal() {
-            var hundred = document.getElementById('hundred').value * 100;
-            var twenty = document.getElementById('twenty').value * 20;
-            var ten = document.getElementById('ten').value * 10;
-            var five = document.getElementById('five').value * 5;
-            var one = document.getElementById('one').value;
+            var hundred = parseInt(document.getElementById('hundred').value, 10) * 100;
+            var twenty = parseInt(document.getElementById('twenty').value, 10) * 20;
+            var ten = parseInt(document.getElementById('ten').value, 10) * 10;
+            var five = parseInt(document.getElementById('five').value, 10) * 5;
+            var one = parseInt(document.getElementById('one').value, 10);
             
             var total = hundred + twenty + ten + five + one;
-            document.getElementById('totalAmount').innerHTML = 'Total: $' + total;
+            document.getElementById('totalAmount').innerHTML = 'Total: $' + total.toFixed(2);
         }
     </script>
-    
+
 </body>
 </html>
