@@ -86,6 +86,7 @@
                 <input type="number" id="penny" value="0"><br>
                 <button onclick="calculateTotal()">Calculate Total</button>
                 <p id="totalAmount">Total: $0</p>
+                <button onclick="clearInputs()">Clear</button>
             </div>
         </div>
     </div>
@@ -104,25 +105,36 @@
         maxZoom: 20,
         attribution: '© OpenStreetMap contributors & CycloSM contributors'
         }).addTo(mymap);
+        
+        function calculateTotal() {
+            var hundred = parseInt(document.getElementById('hundred').value, 10) * 100;
+            var twenty = parseInt(document.getElementById('twenty').value, 10) * 20;
+            var ten = parseInt(document.getElementById('ten').value, 10) * 10;
+            var five = parseInt(document.getElementById('five').value, 10) * 5;
+            var one = parseInt(document.getElementById('one').value, 10);
+            
+            var quarter = parseInt(document.getElementById('quarter').value, 10) * 0.25;
+            var dime = parseInt(document.getElementById('dime').value, 10) * 0.10;
+            var nickel = parseInt(document.getElementById('nickel').value, 10) * 0.05;
+            var penny = parseInt(document.getElementById('penny').value, 10) * 0.01;
+            
+            var total = hundred + twenty + ten + five + one + quarter + dime + nickel + penny;
+            document.getElementById('totalAmount').innerHTML = 'Total: $' + total.toFixed(2);
+        }
+        
+        function clearInputs() {
+            document.getElementById('hundred').value = '0';
+            document.getElementById('twenty').value = '0';
+            document.getElementById('ten').value = '0';
+            document.getElementById('five').value = '0';
+            document.getElementById('one').value = '0';
+            document.getElementById('quarter').value = '0';
+            document.getElementById('dime').value = '0';
+            document.getElementById('nickel').value = '0';
+            document.getElementById('penny').value = '0';
+            document.getElementById('totalAmount').innerHTML = 'Total: $0.00';
+        }
     </script>
-  
-<script>
-    function calculateTotal() {
-        var hundred = parseInt(document.getElementById('hundred').value, 10) * 100;
-        var twenty = parseInt(document.getElementById('twenty').value, 10) * 20;
-        var ten = parseInt(document.getElementById('ten').value, 10) * 10;
-        var five = parseInt(document.getElementById('five').value, 10) * 5;
-        var one = parseInt(document.getElementById('one').value, 10);
-        
-        var quarter = parseInt(document.getElementById('quarter').value, 10) * 0.25;
-        var dime = parseInt(document.getElementById('dime').value, 10) * 0.10;
-        var nickel = parseInt(document.getElementById('nickel').value, 10) * 0.05;
-        var penny = parseInt(document.getElementById('penny').value, 10) * 0.01;
-        
-        var total = hundred + twenty + ten + five + one + quarter + dime + nickel + penny;
-        document.getElementById('totalAmount').innerHTML = 'Total: $' + total.toFixed(2);
-    }
-</script>
 
 </body>
 </html>
