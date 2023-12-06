@@ -64,7 +64,21 @@
         <!-- Card 4: Count-out Calculator -->
     <div class="card">
         <div class="card-content">
-            <h3>Count-out Calculator</h3>
+            <div id="countOutCalculator">
+                <h3>Count-out Calculator</h3>
+                <label for="hundred">$100:</label>
+                <input type="number" id="hundred" value="0"><br>
+                <label for="twenty">$20:</label>
+                <input type="number" id="twenty" value="0"><br>
+                <label for="ten">$10:</label>
+                <input type="number" id="ten" value="0"><br>
+                <label for="five">$5:</label>
+                <input type="number" id="five" value="0"><br>
+                <label for="one">$1:</label>
+                <input type="number" id="one" value="0"><br>
+                <button onclick="calculateTotal()">Calculate Total</button>
+                <p id="totalAmount">Total: $0</p>
+            </div>
         </div>
     </div>
     
@@ -83,6 +97,19 @@
         attribution: '© OpenStreetMap contributors & CycloSM contributors'
         }).addTo(mymap);
     </script>
-
+  
+    <script>
+        function calculateTotal() {
+            var hundred = document.getElementById('hundred').value * 100;
+            var twenty = document.getElementById('twenty').value * 20;
+            var ten = document.getElementById('ten').value * 10;
+            var five = document.getElementById('five').value * 5;
+            var one = document.getElementById('one').value;
+            
+            var total = hundred + twenty + ten + five + one;
+            document.getElementById('totalAmount').innerHTML = 'Total: $' + total;
+        }
+    </script>
+    
 </body>
 </html>
