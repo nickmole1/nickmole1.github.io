@@ -164,9 +164,9 @@ section {
 }
 
 input[type="number"] {
-    width: 10%;
+    width: 40%;
     margin: auto;
-    display: block;
+    display: inline-block;
 }
 
 footer {
