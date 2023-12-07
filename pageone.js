@@ -18,7 +18,7 @@ function calculateTotal() {
     
     var drawerAmount = parseFloat(document.getElementById('drawerAmount').value);
     
-    var total = hundred + twenty + ten + five + one + quarter + dime + nickel + penny;
+    var total = hundred + twenty + ten + five + one + roll + quarter + dime + nickel + penny;
     var totalAfterDrawer = total - drawerAmount;
     
     document.getElementById('totalAmount').innerHTML = 'Total After Drawer Amount: $' + totalAfterDrawer.toFixed(2);
@@ -30,6 +30,7 @@ function clearInputs() {
     document.getElementById('ten').value = '0';
     document.getElementById('five').value = '0';
     document.getElementById('one').value = '0';
+    document.getElementById('roll').value = '0';
     document.getElementById('quarter').value = '0';
     document.getElementById('dime').value = '0';
     document.getElementById('nickel').value = '0';
