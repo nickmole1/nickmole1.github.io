@@ -45,7 +45,10 @@
                 <input type="number" id="nickel" value="0"><br>
                 <label for="penny">$.01:</label>
                 <input type="number" id="penny" value="0"><br>
-                <button onclick="calculateTotal()">Calculate Total</button>.
+                <p></p>
+                <label for="drawerAmount">Cash Drawer Amount to Leave:</label>
+                <input type="number" id="drawerAmount" value="0"><br>
+                <button onclick="calculateTotal()">Calculate Deposit</button>
                 <button onclick="clearInputs()">Clear</button>
                 <p id="totalAmount">Total: $0</p>
             </div>
@@ -118,8 +121,12 @@
             var nickel = parseInt(document.getElementById('nickel').value, 10) * 0.05;
             var penny = parseInt(document.getElementById('penny').value, 10) * 0.01;
             
+            var drawerAmount = parseFloat(document.getElementById('drawerAmount').value);
+            
             var total = hundred + twenty + ten + five + one + quarter + dime + nickel + penny;
-            document.getElementById('totalAmount').innerHTML = 'Total: $' + total.toFixed(2);
+            var totalAfterDrawer = total - drawerAmount;
+            
+            document.getElementById('totalAmount').innerHTML = 'Total After Drawer Amount: $' + totalAfterDrawer.toFixed(2);
         }
         
         function clearInputs() {
@@ -132,6 +139,7 @@
             document.getElementById('dime').value = '0';
             document.getElementById('nickel').value = '0';
             document.getElementById('penny').value = '0';
+            document.getElementById('drawerAmount').value = '0';
             document.getElementById('totalAmount').innerHTML = 'Total: $0.00';
         }
     </script>
