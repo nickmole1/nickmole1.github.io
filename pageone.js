@@ -10,7 +10,7 @@ function calculateTotal() {
     var ten = parseInt(document.getElementById('ten').value, 10) * 10;
     var five = parseInt(document.getElementById('five').value, 10) * 5;
     var one = parseInt(document.getElementById('one').value, 10);
-    
+    var roll = parseInt(document.getElementById('roll').value, 10);
     var quarter = parseInt(document.getElementById('quarter').value, 10) * 0.25;
     var dime = parseInt(document.getElementById('dime').value, 10) * 0.10;
     var nickel = parseInt(document.getElementById('nickel').value, 10) * 0.05;
